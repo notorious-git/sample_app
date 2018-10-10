@@ -10,6 +10,6 @@ class Api::ExamplePagesController < ApplicationController
   def time_method
     @my_message = "Hello!"
     @current_time = Time.now.strftime("%b %e, %l:%M %p")
-    render "times.json.jbuilder"
+    render "time.json.jbuilder"
   end
 end
