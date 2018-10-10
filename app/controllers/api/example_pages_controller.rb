@@ -8,6 +8,8 @@ class Api::ExamplePagesController < ApplicationController
   end
 
   def time_method
-    render json: {time: Time.now.strftime("%b %e, %l:%M %p")}
+    @my_message = "Hello!"
+    @current_time = Time.now.strftime("%b %e, %l:%M %p")
+    render "times.json.jbuilder"
   end
 end
